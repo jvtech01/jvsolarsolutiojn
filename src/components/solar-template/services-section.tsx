@@ -1,6 +1,9 @@
 
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Sun, Building, Wrench, BatteryCharging, Power } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
 const serviceIcons: Record<string, React.ElementType> = {
   residential: Sun,
@@ -20,6 +23,16 @@ const getIconForService = (serviceTitle: string): React.ElementType => {
   return Power;
 };
 
+const getImageForService = (serviceTitle: string): ImagePlaceholder | undefined => {
+  const title = serviceTitle.toLowerCase();
+  if (title.includes('residential')) return PlaceHolderImages.find(img => img.id === 'residential');
+  if (title.includes('commercial')) return PlaceHolderImages.find(img => img.id === 'commercial');
+  if (title.includes('maintenance') || title.includes('repair')) return PlaceHolderImages.find(img => img.id === 'maintenance');
+  if (title.includes('battery')) return PlaceHolderImages.find(img => img.id === 'battery');
+  if (title.includes('inverter')) return PlaceHolderImages.find(img => img.id === 'inverter');
+  return undefined;
+};
+
 export const ServicesSection = ({ services }: { services: Record<string, string> }) => (
   <section id="services" className="py-16 md:py-24 bg-white">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,14 +46,22 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
       </div>
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(services).map(([title, description]) => {
-          const Icon = getIconForService(title);
+          const image = getImageForService(title);
           return (
-            <Card key={title} className="text-center hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              <CardHeader className="items-center">
-                <div className="p-4 bg-primary/10 rounded-full">
-                  <Icon className="w-8 h-8 text-primary" />
+            <Card key={title} className="overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
+              {image && (
+                <div className="relative aspect-video">
+                  <Image 
+                    src={image.imageUrl} 
+                    alt={image.description} 
+                    fill 
+                    className="object-cover"
+                    data-ai-hint={image.imageHint} 
+                  />
                 </div>
-                <CardTitle className="pt-2">{title}</CardTitle>
+              )}
+              <CardHeader>
+                <CardTitle>{title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{description}</p>
