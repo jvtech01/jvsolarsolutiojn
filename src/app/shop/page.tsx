@@ -10,15 +10,13 @@ import {
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { products } from '@/lib/products';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ShopPage() {
-    const phoneNumber = '2348087008364';
+    const phoneNumber = '2347045396856';
     const getWhatsAppLink = (productName: string, productPrice: string) => {
         const message = `Hello, I'm interested in the ${productName} which costs ${productPrice}. Please provide more details.`;
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     }
-
 
   return (
     <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -39,13 +37,11 @@ export default function ShopPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => {
-          const image = PlaceHolderImages.find((img) => img.id === product.imageSlug);
           return (
             <div key={product.id} className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-              {image && (
                 <div className="relative aspect-square">
                   <Image
-                    src={image.imageUrl}
+                    src={`/images/${product.imageSlug}.jpg`}
                     alt={product.name}
                     fill
                     className="object-cover"
@@ -56,7 +52,6 @@ export default function ShopPage() {
                     </div>
                   )}
                 </div>
-              )}
               <div className="p-4 flex flex-col flex-grow">
                 <h3 className="font-semibold text-lg mb-2 flex-grow">{product.name}</h3>
                 <div className="flex items-center justify-between">

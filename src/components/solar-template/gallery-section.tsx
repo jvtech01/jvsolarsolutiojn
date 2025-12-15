@@ -1,10 +1,14 @@
 
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const galleryImages = [
-  'gallery1', 'gallery2', 'gallery3', 'gallery4', 'gallery5', 'gallery6'
-].map(id => PlaceHolderImages.find(img => img.id === id)).filter(Boolean);
+  { src: '/images/gallery-1.jpg', alt: 'Close up of solar panels.' },
+  { src: '/images/gallery-2.jpg', alt: 'Family in front of their house with solar panels.' },
+  { src: '/images/gallery-3.jpg', alt: 'Drone shot of solar farm.' },
+  { src: '/images/gallery-4.jpg', alt: 'Technician installing panels on a roof.' },
+  { src: '/images/gallery-5.jpg', alt: 'A smiling homeowner with a tablet showing energy savings.' },
+  { src: '/images/gallery-6.jpg', alt: 'Sunset over a field of solar panels.' },
+];
 
 export const GallerySection = () => (
   <section id="gallery" className="py-16 md:py-24 bg-background">
@@ -18,14 +22,13 @@ export const GallerySection = () => (
         </p>
       </div>
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
-        {galleryImages.map((image, index) => image && (
+        {galleryImages.map((image, index) => (
           <div key={index} className="relative aspect-video rounded-lg overflow-hidden group shadow-lg">
             <Image
-              src={image.imageUrl}
-              alt={image.description}
+              src={image.src}
+              alt={image.alt}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
-              data-ai-hint={image.imageHint}
             />
             <div className="absolute inset-0 bg-black/20" />
           </div>

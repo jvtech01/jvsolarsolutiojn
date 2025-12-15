@@ -1,10 +1,6 @@
 
 import { Users, Target, Eye } from 'lucide-react';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const aboutHeroImage = PlaceHolderImages.find(img => img.id === 'gallery4');
-const whoWeAreImage = PlaceHolderImages.find(img => img.id === 'about');
 
 export default function AboutPage() {
   const stats = [
@@ -17,16 +13,13 @@ export default function AboutPage() {
   return (
     <main>
        <section className="relative h-[400px] text-white">
-        {aboutHeroImage && (
-            <Image
-            src={aboutHeroImage.imageUrl}
-            alt={aboutHeroImage.description}
+          <Image
+            src="/images/about-hero.jpg"
+            alt="Technician installing panels on a roof."
             fill
             className="object-cover"
-            data-ai-hint={aboutHeroImage.imageHint}
             priority
-            />
-        )}
+          />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
             <h1 className="text-4xl md:text-5xl font-extrabold">About Emmydon Solar Tech</h1>
@@ -47,15 +40,12 @@ export default function AboutPage() {
               </p>
             </div>
              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
-              {whoWeAreImage && (
                 <Image
-                  src={whoWeAreImage.imageUrl}
-                  alt={whoWeAreImage.description}
+                  src="/images/who-we-are.jpg"
+                  alt="A diverse team of smiling engineers in hard hats."
                   fill
                   className="object-cover"
-                  data-ai-hint={whoWeAreImage.imageHint}
                 />
-              )}
             </div>
           </div>
         </div>

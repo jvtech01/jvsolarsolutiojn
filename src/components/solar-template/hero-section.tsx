@@ -1,12 +1,10 @@
+
 'use client';
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-
-const heroImage = PlaceHolderImages.find(img => img.id === 'hero');
 
 type HeroSectionProps = {
   headline: string;
@@ -56,16 +54,13 @@ export const HeroSection = ({ subtext }: HeroSectionProps) => {
 
   return (
     <section className="relative h-[600px] text-white">
-        {heroImage && (
-            <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            data-ai-hint={heroImage.imageHint}
-            priority
-            />
-        )}
+        <Image
+        src="/images/hero.jpg"
+        alt="Solar panels on a modern house roof under a clear blue sky."
+        fill
+        className="object-cover"
+        priority
+        />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold font-headline leading-tight drop-shadow-lg min-h-[144px] md:min-h-[192px]">

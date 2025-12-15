@@ -1,9 +1,7 @@
 
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Sun, Building, Wrench, BatteryCharging, Power, Video, Wifi, KeyRound, Fence } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Sun, Video, Wifi, Power, KeyRound, Fence } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -27,19 +25,19 @@ const getIconForService = (serviceTitle: string): React.ElementType => {
   return Power;
 };
 
-const getImageForService = (serviceTitle: string): ImagePlaceholder | undefined => {
+const getImageForService = (serviceTitle: string): string => {
   const title = serviceTitle.toLowerCase();
-  if (title.includes('solar')) return PlaceHolderImages.find(img => img.id === 'residential');
-  if (title.includes('cctv')) return PlaceHolderImages.find(img => img.id === 'commercial');
-  if (title.includes('intercom')) return PlaceHolderImages.find(img => img.id === 'maintenance');
-  if (title.includes('dstv')) return PlaceHolderImages.find(img => img.id === 'gallery1');
-  if (title.includes('gate')) return PlaceHolderImages.find(img => img.id === 'gallery2');
-  if (title.includes('fence')) return PlaceHolderImages.find(img => img.id === 'gallery3');
-  return undefined;
+  if (title.includes('solar')) return '/images/service-solar.jpg';
+  if (title.includes('cctv')) return '/images/service-cctv.jpg';
+  if (title.includes('intercom')) return '/images/service-intercom.jpg';
+  if (title.includes('dstv')) return '/images/service-dstv.jpg';
+  if (title.includes('gate')) return '/images/service-gate.jpg';
+  if (title.includes('fence')) return '/images/service-fence.jpg';
+  return '/images/service-default.jpg';
 };
 
 export const ServicesSection = ({ services }: { services: Record<string, string> }) => {
-    const phoneNumber = '2348087008364';
+    const phoneNumber = '2347045396856';
     const getWhatsAppLink = (serviceName: string) => {
         const message = `Hello, I would like to learn more about your ${serviceName} service.`;
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -57,21 +55,18 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
       </div>
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(services).map(([title, description]) => {
-          const image = getImageForService(title);
+          const imageUrl = getImageForService(title);
           const Icon = getIconForService(title);
           return (
             <Card key={title} className="overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              {image && (
-                <div className="relative aspect-video">
-                  <Image 
-                    src={image.imageUrl} 
-                    alt={image.description} 
-                    fill 
-                    className="object-cover"
-                    data-ai-hint={image.imageHint} 
-                  />
-                </div>
-              )}
+              <div className="relative aspect-video">
+                <Image 
+                  src={imageUrl} 
+                  alt={title} 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Icon className="w-6 h-6 text-primary" />
@@ -79,7 +74,7 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
                 </CardTitle>
               </CardHeader>
               <CardContent className='flex-grow'>
-                <p className="text-muted-foreground">{description}</p>
+                <p className="text-muted-foreground">{description}</p>              
               </CardContent>
               <CardFooter>
                 <Button asChild variant="outline" className="w-full">

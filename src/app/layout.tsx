@@ -13,6 +13,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 export const metadata: Metadata = {
   title: 'Emmydon solar tech enterprises',
   description: 'Your trusted partner for solar and security solutions.',
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +35,7 @@ export default function RootLayout({
           >
           <SolarHeader companyName={companyName} />
           {children}
-          <WhatsappButton phoneNumber="2348087008364" />
+          <WhatsappButton phoneNumber="2347045396856" />
           <SolarFooter companyName={companyName} />
           <Toaster />
         </ThemeProvider>

@@ -1,9 +1,6 @@
 
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle2 } from 'lucide-react';
-
-const aboutImage = PlaceHolderImages.find(img => img.id === 'about');
 
 export const AboutSection = ({ content }: { content: string }) => {
   const sellingPoints = [
@@ -18,15 +15,12 @@ export const AboutSection = ({ content }: { content: string }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={aboutImage.imageHint}
-              />
-            )}
+            <Image
+              src="/images/about.jpg"
+              alt="A diverse team of smiling engineers in hard hats."
+              fill
+              className="object-cover"
+            />
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">
