@@ -8,7 +8,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const FeaturedProducts = () => {
   const featured = products.slice(0, 2);
-    const phoneNumber = '+2347045396856';
+    const phoneNumber = '2347045396856';
     const getWhatsAppLink = (productName: string, productPrice: string) => {
         const message = `Hello, I'm interested in the ${productName} which costs ${productPrice}. Please provide more details.`;
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

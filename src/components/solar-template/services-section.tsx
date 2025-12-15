@@ -36,7 +36,7 @@ const getImageForService = (serviceTitle: string): ImagePlaceholder | undefined 
 };
 
 export const ServicesSection = ({ services }: { services: Record<string, string> }) => {
-    const phoneNumber = '+2347045396856';
+    const phoneNumber = '2347045396856';
     const getWhatsAppLink = (serviceName: string) => {
         const message = `Hello, I would like to learn more about your ${serviceName} service.`;
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

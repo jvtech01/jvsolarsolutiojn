@@ -32,7 +32,7 @@ export default function RootLayout({
           >
           <SolarHeader companyName={companyName} />
           {children}
-          <WhatsappButton phoneNumber="+2347045396856" />
+          <WhatsappButton phoneNumber="2347045396856" />
           <SolarFooter companyName={companyName} />
           <Toaster />
         </ThemeProvider>
