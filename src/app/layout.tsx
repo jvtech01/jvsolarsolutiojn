@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`font-sans ${inter.variable} antialiased bg-background text-foreground`}>
         <SolarHeader companyName={companyName} />
         {children}
-        <WhatsappButton phoneNumber="2347045396856" />
+        <WhatsappButton phoneNumber="+2347045396856" />
         <SolarFooter companyName={companyName} />
         <Toaster />
       </body>

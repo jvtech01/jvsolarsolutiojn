@@ -13,7 +13,7 @@ import { products } from '@/lib/products';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ShopPage() {
-    const phoneNumber = '07045396856';
+    const phoneNumber = '+2347045396856';
     const getWhatsAppLink = (productName: string, productPrice: string) => {
         const message = `Hello, I'm interested in the ${productName} which costs ${productPrice}. Please provide more details.`;
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
