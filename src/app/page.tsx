@@ -10,6 +10,7 @@ import { FaqSection } from '@/components/solar-template/faq-section';
 import { QuoteSection } from '@/components/solar-template/quote-section';
 import type { GenerateWebsiteContentOutput } from '@/lib/types';
 import { FeaturedProducts } from '@/components/solar-template/featured-products';
+import { RunningText } from '@/components/solar-template/running-text';
 
 const defaultContent: GenerateWebsiteContentOutput = {
   homepageHeadline: 'Power Your Future with Clean, Affordable Solar Energy',
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection headline={content.homepageHeadline} subtext={content.homepageSubtext} />
+      <RunningText />
       <AboutSection content={content.aboutUsContent} />
       <ServicesSection services={content.servicesDescriptions} />
       <FeaturedProducts />
