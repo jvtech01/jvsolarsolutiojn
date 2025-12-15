@@ -76,17 +76,19 @@ export const TestimonialsSection = () => {
                 <div className="p-1 h-full">
                   <Card className="flex flex-col h-full">
                     <CardContent className="pt-6 flex-grow flex flex-col">
-                      <div className="flex text-yellow-400 mb-2">
-                        {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
-                      </div>
                       <p className="text-muted-foreground flex-grow">"{testimonial.quote}"</p>
-                      <div className="mt-4 flex items-center gap-4">
-                        <Avatar>
-                          <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="font-semibold text-foreground">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                      <div className="mt-4 flex items-center justify-between">
+                        <div className='flex items-center gap-4'>
+                            <Avatar>
+                                <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                                <p className="font-semibold text-foreground">{testimonial.name}</p>
+                                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                            </div>
+                        </div>
+                         <div className="flex text-yellow-400">
+                          {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
                         </div>
                       </div>
                     </CardContent>
