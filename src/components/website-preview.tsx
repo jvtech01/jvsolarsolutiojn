@@ -1,7 +1,4 @@
 
-import type { GenerateWebsiteContentOutput } from '@/lib/types';
-import type { WebsiteSection } from '@/app/page';
-
 import { SolarHeader } from './solar-template/solar-header';
 import { HeroSection } from './solar-template/hero-section';
 import { AboutSection } from './solar-template/about-section';
@@ -10,14 +7,7 @@ import { GallerySection } from './solar-template/gallery-section';
 import { TestimonialsSection } from './solar-template/testimonials-section';
 import { QuoteSection } from './solar-template/quote-section';
 import { SolarFooter } from './solar-template/solar-footer';
-
-type WebsitePreviewProps = {
-  data: {
-    content: GenerateWebsiteContentOutput;
-    companyName: string;
-  } | null;
-  visibleSections: Record<WebsiteSection, boolean>;
-};
+import type { GenerateWebsiteContentOutput } from '@/lib/types';
 
 const defaultContent: GenerateWebsiteContentOutput = {
   homepageHeadline: 'Power Your Future with Clean, Affordable Solar Energy',
@@ -32,9 +22,9 @@ const defaultContent: GenerateWebsiteContentOutput = {
   },
 };
 
-export default function WebsitePreview({ data, visibleSections }: WebsitePreviewProps) {
-  const companyName = data?.companyName || 'Radiant Solar Solutions';
-  const content = data?.content || defaultContent;
+export default function WebsitePreview() {
+  const companyName = 'Radiant Solar Solutions';
+  const content = defaultContent;
 
   return (
     <div className="bg-white text-gray-800 font-sans">
@@ -43,9 +33,9 @@ export default function WebsitePreview({ data, visibleSections }: WebsitePreview
         <HeroSection headline={content.homepageHeadline} subtext={content.homepageSubtext} />
         <AboutSection content={content.aboutUsContent} />
         <ServicesSection services={content.servicesDescriptions} />
-        {visibleSections.gallery && <GallerySection />}
-        {visibleSections.testimonials && <TestimonialsSection />}
-        {visibleSections.quoteForm && <QuoteSection />}
+        <GallerySection />
+        <TestimonialsSection />
+        <QuoteSection />
       </main>
       <SolarFooter companyName={companyName} />
     </div>
