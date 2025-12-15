@@ -1,7 +1,7 @@
 
 'use client';
 import { Button } from '@/components/ui/button';
-import { Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
@@ -13,6 +13,7 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 import { ModeToggle } from '../ui/mode-toggle';
+import Image from 'next/image';
 
 export const SolarHeader = ({ companyName }: { companyName: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <Sun className="w-7 h-7 text-primary group-hover:rotate-90 transition-transform duration-300" />
+             <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
             <span className="text-xl font-bold tracking-tight text-foreground">
               {companyName}
             </span>
@@ -71,7 +72,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                  <SheetHeader className='border-b pb-4 flex-row justify-between items-center'>
                     <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                      <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
-                        <Sun className="w-7 h-7 text-primary"/>
+                        <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
                         <span className="text-xl font-bold tracking-tight text-foreground">{companyName}</span>
                       </Link>
                       <SheetClose asChild>

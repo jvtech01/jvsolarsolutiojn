@@ -1,6 +1,7 @@
 
-import { Sun, Twitter, Facebook, Instagram } from 'lucide-react';
 import Link from 'next/link';
+import { Twitter, Facebook, Instagram } from 'lucide-react';
+import Image from 'next/image';
 
 export const SolarFooter = ({ companyName }: { companyName: string }) => (
   <footer className="bg-gray-900 text-gray-300">
@@ -8,7 +9,7 @@ export const SolarFooter = ({ companyName }: { companyName: string }) => (
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
         <div className="col-span-2 lg:col-span-1">
           <div className="flex items-center gap-2">
-            <Sun className="w-7 h-7 text-primary" />
+            <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={35} height={35} className="rounded-full" />
             <span className="text-xl font-bold text-white">{companyName}</span>
           </div>
           <p className="mt-4 text-sm text-gray-400">

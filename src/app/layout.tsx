@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Emmydon solar tech enterprises',
   description: 'Your trusted partner for solar and security solutions.',
   icons: {
-    icon: '/images/favicon.ico',
+    icon: '/images/favicon.jpg',
   },
 };
 
