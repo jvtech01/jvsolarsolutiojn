@@ -2,6 +2,8 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { SolarHeader } from '@/components/solar-template/solar-header';
+import { SolarFooter } from '@/components/solar-template/solar-footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -15,9 +17,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const companyName = 'Radiant Solar Solutions';
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} antialiased`}>{children}</body>
+      <body className={`font-sans ${inter.variable} antialiased bg-background text-foreground`}>
+        <SolarHeader companyName={companyName} />
+        {children}
+        <SolarFooter companyName={companyName} />
+      </body>
     </html>
   );
 }

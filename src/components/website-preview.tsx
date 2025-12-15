@@ -27,7 +27,7 @@ export default function WebsitePreview() {
   const content = defaultContent;
 
   return (
-    <div className="bg-white text-gray-800 font-sans">
+    <div className="bg-background text-gray-800 font-sans">
       <SolarHeader companyName={companyName} />
       <main>
         <HeroSection headline={content.homepageHeadline} subtext={content.homepageSubtext} />

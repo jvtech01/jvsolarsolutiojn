@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
 
 const heroImage = PlaceHolderImages.find(img => img.id === 'hero');
 
@@ -31,8 +32,8 @@ export const HeroSection = ({ headline, subtext }: HeroSectionProps) => {
         <p className="mt-4 max-w-2xl text-lg md:text-xl text-gray-200 drop-shadow-md">
           {subtext}
         </p>
-        <Button size="lg" className="mt-8">
-          <a href="#contact">Request a Free Consultation</a>
+        <Button size="lg" className="mt-8" asChild>
+          <Link href="/contact">Request a Free Consultation</Link>
         </Button>
       </div>
     </section>
