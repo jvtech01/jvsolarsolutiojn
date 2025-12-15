@@ -35,7 +35,13 @@ const getImageForService = (serviceTitle: string): ImagePlaceholder | undefined 
   return undefined;
 };
 
-export const ServicesSection = ({ services }: { services: Record<string, string> }) => (
+export const ServicesSection = ({ services }: { services: Record<string, string> }) => {
+    const phoneNumber = '07045396856';
+    const getWhatsAppLink = (serviceName: string) => {
+        const message = `Hello, I would like to learn more about your ${serviceName} service.`;
+        return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    }
+  return (
   <section id="services" className="py-16 md:py-24 bg-white">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
@@ -70,7 +76,7 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
               </CardContent>
               <CardFooter>
                 <Button asChild variant="outline" className="w-full">
-                  <Link href="/services">Learn More</Link>
+                  <Link href={getWhatsAppLink(title)} target="_blank" rel="noopener noreferrer">Learn More</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -79,4 +85,4 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
       </div>
     </div>
   </section>
-);
+)};

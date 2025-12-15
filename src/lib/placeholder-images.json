@@ -77,6 +77,60 @@
       "description": "Sunset over a field of solar panels.",
       "imageUrl": "https://images.unsplash.com/photo-1714330477134-4275bc2cff3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c29sYXIlMjBwYW5lbCUyMHN1bnNldHxlbnwwfHx8fDE3NjU3OTE2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "solar panel sunset"
+    },
+    {
+      "id": "jinko-615w-solar-panel",
+      "description": "Jinko 615W Solar Panel",
+      "imageUrl": "https://images.unsplash.com/photo-1612045224533-7a6c7e8a49ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqaW5rbyUyMHNvbGFyJTIwcGFuZWx8ZW58MHx8fHwxNzY1NzkzODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jinko solar panel"
+    },
+    {
+      "id": "620w-bifacial-solar-panel-jinko",
+      "description": "Trina Solar 620W Bifacial Solar Panel",
+      "imageUrl": "https://picsum.photos/seed/trina620/600/600",
+      "imageHint": "trina solar panel"
+    },
+    {
+      "id": "jinko-solar-615w-bifacial-lagos",
+      "description": "Jinko Solar 615W N-Type Bifacial Solar Panel",
+      "imageUrl": "https://picsum.photos/seed/jinko615bi/600/600",
+      "imageHint": "jinko bifacial panel"
+    },
+    {
+      "id": "solar-energy",
+      "description": "Solar Energy Financing",
+      "imageUrl": "https://images.unsplash.com/photo-1754619880959-2b0528375883?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2xhciUyMGZpbmFuY2luZ3xlbnwwfHx8fDE3NjU3OTM4ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar financing"
+    },
+    {
+      "id": "12v-150ah-ups-battery-lagos",
+      "description": "TORCHN 12V 150Ah GEL UPS Battery",
+      "imageUrl": "https://images.unsplash.com/photo-1586792015460-099de4240210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8R0VMJTIwVVBTJTIwYmF0dGVyeXxlbnwwfHx8fDE3NjU3OTM4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "GEL UPS battery"
+    },
+    {
+      "id": "12v-Battery-250ah-Deep-Cycle-battery",
+      "description": "Torchn Gel 12V 250ah Battery",
+      "imageUrl": "https://images.unsplash.com/photo-1591964006776-90b32e88f5ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWVwJTIwY3ljbGUlMjBiYXR0ZXJ5fGVufDB8fHx8MTc2NTc5Mzg4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "deep cycle battery"
+    },
+    {
+      "id": "quanta-12v-200ah-battery-lagos",
+      "description": "Amaron Quanta 12V 200Ah Battery",
+      "imageUrl": "https://images.unsplash.com/photo-1626368167765-fd8a597f3770?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbWFyb24lMjBiYXR0ZXJ5fGVufDB8fHx8MTc2NTc5Mzg4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "amaron battery"
+    },
+    {
+      "id": "submersible-solar-water-pump-lagos",
+      "description": "JDS 2.0HP 1500W Solar Water Pump",
+      "imageUrl": "https://images.unsplash.com/photo-1661204458253-f1fd9c1892bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2xhciUyMHdhdGVyJTIwcHVtcHxlbnwwfHx8fDE3NjU3OTM4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar water pump"
+    },
+    {
+      "id": "solar-battery-price",
+      "description": "Deka 12V 200Ah Gel Deep Cycle Battery",
+      "imageUrl": "https://images.unsplash.com/photo-1586792015460-099de4240210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZWthJTIwYmF0dGVyeXxlbnwwfHx8fDE3NjU3OTM4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "deka battery"
     }
   ]
 }
