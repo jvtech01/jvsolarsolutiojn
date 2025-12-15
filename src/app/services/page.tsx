@@ -1,6 +1,8 @@
 
 import { ServicesSection } from '@/components/solar-template/services-section';
 import type { GenerateWebsiteContentOutput } from '@/lib/types';
+import { QuoteSection } from '@/components/solar-template/quote-section';
+import { FaqSection } from '@/components/solar-template/faq-section';
 
 const defaultContent: GenerateWebsiteContentOutput = {
   homepageHeadline: '',
@@ -12,13 +14,22 @@ const defaultContent: GenerateWebsiteContentOutput = {
     'Inverter Installation': 'Expert installation of high-efficiency inverters from leading brands. Maximize your solar energy conversion and ensure the reliability of your system.',
     'Maintenance & Repairs': 'Comprehensive maintenance plans and prompt repair services to keep your system running at peak performance for years to come. We protect your investment.',
     'Battery Storage': 'Integrate battery storage with your solar system to store excess energy for use during outages or at night. Achieve true energy independence.',
+    'Solar Financing': 'We offer flexible financing options to make your transition to solar energy as affordable as possible. Our team can help you find a plan that fits your budget.'
   },
 };
 
 export default function ServicesPage() {
   return (
     <main>
+        <section className="bg-primary text-primary-foreground py-20 text-center">
+            <div className="container mx-auto px-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold">Our Services</h1>
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Full-Suite Solar Solutions Tailored For You</p>
+            </div>
+      </section>
       <ServicesSection services={defaultContent.servicesDescriptions} />
+      <FaqSection />
+      <QuoteSection />
     </main>
   );
 }
