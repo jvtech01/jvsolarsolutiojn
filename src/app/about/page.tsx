@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose lg:prose-lg max-w-none text-muted-foreground">
@@ -61,22 +61,22 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="bg-gray-50 py-16 md:py-24">
+      <section className="bg-secondary py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div className="p-8">
                     <Target className="w-12 h-12 mx-auto text-primary"/>
-                    <h3 className="text-2xl font-bold mt-4">Our Mission</h3>
+                    <h3 className="text-2xl font-bold mt-4 text-foreground">Our Mission</h3>
                     <p className="mt-2 text-muted-foreground">To accelerate the adoption of solar energy by providing high-quality, affordable, and reliable solar solutions that empower our customers and protect our planet.</p>
                   </div>
                    <div className="p-8">
                     <Eye className="w-12 h-12 mx-auto text-primary"/>
-                    <h3 className="text-2xl font-bold mt-4">Our Vision</h3>
+                    <h3 className="text-2xl font-bold mt-4 text-foreground">Our Vision</h3>
                     <p className="mt-2 text-muted-foreground">To be the most trusted and customer-centric solar company, leading the way towards a future where clean energy is accessible to everyone.</p>
                   </div>
                    <div className="p-8">
                     <Users className="w-12 h-12 mx-auto text-primary"/>
-                    <h3 className="text-2xl font-bold mt-4">Our Team</h3>
+                    <h3 className="text-2xl font-bold mt-4 text-foreground">Our Team</h3>
                     <p className="mt-2 text-muted-foreground">Our success is driven by our dedicated team of certified engineers, installers, and energy consultants who share a passion for excellence and sustainability.</p>
                   </div>
                </div>

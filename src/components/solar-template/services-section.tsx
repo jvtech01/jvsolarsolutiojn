@@ -42,7 +42,7 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
         return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     }
   return (
-  <section id="services" className="py-16 md:py-24 bg-white">
+  <section id="services" className="py-16 md:py-24 bg-background">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">

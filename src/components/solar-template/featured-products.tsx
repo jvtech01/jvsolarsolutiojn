@@ -15,7 +15,7 @@ export const FeaturedProducts = () => {
     }
 
   return (
-    <section id="featured-products" className="py-16 md:py-24 bg-gray-50">
+    <section id="featured-products" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">
@@ -29,7 +29,7 @@ export const FeaturedProducts = () => {
           {featured.map((product) => {
             const image = PlaceHolderImages.find((img) => img.id === product.imageSlug);
             return (
-              <div key={product.id} className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+              <div key={product.id} className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-card">
                 {image && (
                   <div className="relative aspect-square">
                     <Image
