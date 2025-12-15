@@ -28,23 +28,23 @@ export const QuoteSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">
-              Ready to Go Solar?
+              Ready to Get Started?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Contact us today for a free, no-obligation consultation and quote. Our experts are ready to design the perfect solar solution for you.
+              Contact us today for a free, no-obligation consultation and quote. Our experts are ready to design the perfect solution for you.
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>09033662797 / 07045396856</span>
+                <span>08087008364 / 08142662925</span>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>contact@jvsolarsolutions.com</span>
+                <span>emmydonsolartech37@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Rainoil Mall, 295 Nnebisi Road, Asaba, Delta State</span>
+                <span>No 284 Nnebisi road Ekenem-Chukwu plaza, Asaba</span>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ export const SolarFooter = ({ companyName }: { companyName: string }) => (
             <span className="text-xl font-bold text-white">{companyName}</span>
           </div>
           <p className="mt-4 text-sm text-gray-400">
-            Your partner in clean, renewable energy solutions.
+            Your partner in clean, renewable energy and security solutions.
           </p>
         </div>
 
@@ -29,30 +29,30 @@ export const SolarFooter = ({ companyName }: { companyName: string }) => (
         <div>
           <h3 className="font-semibold text-white tracking-wider">Services</h3>
           <ul className="mt-4 space-y-2">
-            <li><Link href="/services#residential" className="hover:text-white transition-colors">Residential Solar</Link></li>
-            <li><Link href="/services#commercial" className="hover:text-white transition-colors">Commercial Solar</Link></li>
-            <li><Link href="/services#battery" className="hover:text-white transition-colors">Battery Storage</Link></li>
-            <li><Link href="/services#maintenance" className="hover:text-white transition-colors">Maintenance</Link></li>
+            <li><Link href="/services" className="hover:text-white transition-colors">Solar/Inverter Installation</Link></li>
+            <li><Link href="/services" className="hover:text-white transition-colors">CCTV Cameras</Link></li>
+            <li><Link href="/services" className="hover:text-white transition-colors">Electric Fence</Link></li>
+            <li><Link href="/services" className="hover:text-white transition-colors">Remote Gate</Link></li>
           </ul>
         </div>
 
         <div className="col-span-2 md:col-span-1">
           <h3 className="font-semibold text-white tracking-wider">Contact Us</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li className="text-gray-400">Rainoil Mall, 295 Nnebisi Road, Asaba, Delta State</li>
-            <li className="text-gray-400">contact@jvsolarsolutions.com</li>
-            <li className="text-gray-400">09033662797 / 07045396856</li>
+            <li className="text-gray-400">No 284 Nnebisi road Ekenem-Chukwu plaza opposite legend interior Asaba delta state</li>
+            <li className="text-gray-400">emmydonsolartech37@gmail.com</li>
+            <li className="text-gray-400">08087008364 / 08142662925</li>
           </ul>
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center">
         <p className="text-sm text-gray-400 order-2 sm:order-1 mt-4 sm:mt-0">
-          &copy; {new Date().getFullYear()} {companyName}. All Rights Reserved.
+          &copy; {new Date().getFullYear()} {companyName}. All Rights Reserved. RC: 8039452
         </p>
         <div className="flex items-center space-x-4 order-1 sm:order-2">
           <a href="#" className="hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
           <a href="#" className="hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-          <a href="#" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+          <a href="https://www.instagram.com/reel/DR4zoakjFzw/?igsh=MTkwMDFqa2thbjhkMw==" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
         </div>
       </div>
     </div>

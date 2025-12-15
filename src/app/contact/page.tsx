@@ -36,7 +36,7 @@ export default function ContactPage() {
             <div className="mt-8">
                  <div className="inline-flex items-center gap-4 text-lg">
                     <Map className="w-6 h-6 text-primary" />
-                    <span>Rainoil Mall, 295 Nnebisi Road, Asaba, Delta State</span>
+                    <span>No 284 Nnebisi road Ekenem-Chukwu plaza, Asaba, Delta State</span>
                 </div>
             </div>
             <div className="mt-8 h-80 w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">

@@ -14,14 +14,15 @@ import { RunningText } from '@/components/solar-template/running-text';
 
 const defaultContent: GenerateWebsiteContentOutput = {
   homepageHeadline: 'Power Your Future with Clean, Affordable Solar Energy',
-  homepageSubtext: 'We provide top-tier solar panel installation and maintenance for homes and businesses. Get your free quote today and start saving on your energy bills!',
-  aboutUsContent: 'We are a passionate team of certified solar professionals dedicated to helping our community transition to sustainable energy. With over a decade of experience, we guarantee quality installations, use only the highest-rated materials, and provide exceptional customer service from start to finish. Our mission is to make solar accessible and affordable for everyone.',
+  homepageSubtext: 'We provide top-tier solar/inverter installation, CCTV, DSTV, and security solutions for homes and businesses.',
+  aboutUsContent: 'We are a passionate team of certified professionals dedicated to helping our community with sustainable energy and security solutions. With over a decade of experience, we guarantee quality installations, use only the highest-rated materials, and provide exceptional customer service from start to finish. Our mission is to make solar and security accessible and affordable for everyone.',
   servicesDescriptions: {
-    'Residential Solar': 'Custom solar solutions for your home. We handle everything from design to installation, ensuring a seamless process to help you reduce energy bills and your carbon footprint.',
-    'Commercial Solar': 'Large-scale solar installations for businesses. Improve your company\'s sustainability profile and achieve significant savings on operational costs with our tailored commercial systems.',
-    'Inverter Installation': 'Expert installation of high-efficiency inverters from leading brands. Maximize your solar energy conversion and ensure the reliability of your system.',
-    'Maintenance & Repairs': 'Comprehensive maintenance plans and prompt repair services to keep your system running at peak performance for years to come. We protect your investment.',
-    'Battery Storage': 'Integrate battery storage with your solar system to store excess energy for use during outages or at night. Achieve true energy independence.',
+    'Solar/Inverter Installation': 'Custom solar and inverter solutions for your home or business. We handle everything from design to installation, ensuring a seamless process to help you reduce energy bills and your carbon footprint.',
+    'CCTV Cameras Installation': 'Secure your property with our professional CCTV camera installation services. We offer high-quality cameras and expert setup for residential and commercial clients.',
+    'Intercom Installation': 'Enhance communication and security within your property with our reliable intercom system installations. We provide solutions for both homes and offices.',
+    'DSTV/Satellite Installation': 'Get the best entertainment with our DSTV and satellite installation services. We ensure optimal signal and a clean setup for your viewing pleasure.',
+    'Automatic Remote Gate': 'Add convenience and security to your property with an automatic remote-controlled gate. We offer professional installation and maintenance services.',
+    'Electric Fence Installation': 'Protect your perimeter with a high-voltage electric fence. Our installations are safe, reliable, and a powerful deterrent against intruders.',
   },
 };
 

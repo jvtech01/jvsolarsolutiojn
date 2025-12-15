@@ -11,8 +11,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'JV-SOLAR SOLUTIONS',
-  description: 'Your trusted partner for solar solutions.',
+  title: 'Emmydon solar tech enterprises',
+  description: 'Your trusted partner for solar and security solutions.',
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const companyName = 'JV-SOLAR SOLUTIONS';
+  const companyName = 'Emmydon solar tech';
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${inter.variable} antialiased bg-background text-foreground`}>
@@ -32,7 +32,7 @@ export default function RootLayout({
           >
           <SolarHeader companyName={companyName} />
           {children}
-          <WhatsappButton phoneNumber="2347045396856" />
+          <WhatsappButton phoneNumber="2348087008364" />
           <SolarFooter companyName={companyName} />
           <Toaster />
         </ThemeProvider>
