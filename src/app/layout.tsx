@@ -4,6 +4,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import { SolarHeader } from '@/components/solar-template/solar-header';
 import { SolarFooter } from '@/components/solar-template/solar-footer';
+import { WhatsappButton } from '@/components/ui/whatsapp-button';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`font-sans ${inter.variable} antialiased bg-background text-foreground`}>
         <SolarHeader companyName={companyName} />
         {children}
+        <WhatsappButton phoneNumber="2347045396856" />
         <SolarFooter companyName={companyName} />
       </body>
     </html>
