@@ -1,15 +1,30 @@
 
 import { QuoteSection } from '@/components/solar-template/quote-section';
 import { Map } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const contactHeroImage = PlaceHolderImages.find(img => img.id === 'gallery5');
 
 export default function ContactPage() {
   return (
     <main>
-        <section className="bg-primary text-primary-foreground py-20 text-center">
-            <div className="container mx-auto px-4">
+      <section className="relative h-[400px] text-white">
+        {contactHeroImage && (
+            <Image
+            src={contactHeroImage.imageUrl}
+            alt={contactHeroImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={contactHeroImage.imageHint}
+            priority
+            />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
             <h1 className="text-4xl md:text-5xl font-extrabold">Contact Us</h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">We're here to help you make the switch to solar. Reach out today!</p>
-            </div>
+        </div>
       </section>
       <QuoteSection />
       <section className="py-16 md:py-24 bg-gray-50">

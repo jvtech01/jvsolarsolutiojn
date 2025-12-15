@@ -1,10 +1,10 @@
 
-import { Users, Target, Eye, CheckCircle } from 'lucide-react';
+import { Users, Target, Eye } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const aboutImage = PlaceHolderImages.find(img => img.id === 'about');
-const teamImage = PlaceHolderImages.find(img => img.id === 'gallery5');
+const aboutHeroImage = PlaceHolderImages.find(img => img.id === 'gallery4');
+const whoWeAreImage = PlaceHolderImages.find(img => img.id === 'about');
 
 export default function AboutPage() {
   const stats = [
@@ -16,10 +16,21 @@ export default function AboutPage() {
 
   return (
     <main>
-      <section className="bg-primary text-primary-foreground py-20 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold">About JV-SOLAR SOLUTIONS</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Your Trusted Partner in Renewable Energy</p>
+       <section className="relative h-[400px] text-white">
+        {aboutHeroImage && (
+            <Image
+            src={aboutHeroImage.imageUrl}
+            alt={aboutHeroImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={aboutHeroImage.imageHint}
+            priority
+            />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold">About JV-SOLAR SOLUTIONS</h1>
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Your Trusted Partner in Renewable Energy</p>
         </div>
       </section>
       
@@ -36,13 +47,13 @@ export default function AboutPage() {
               </p>
             </div>
              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
-              {aboutImage && (
+              {whoWeAreImage && (
                 <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
+                  src={whoWeAreImage.imageUrl}
+                  alt={whoWeAreImage.description}
                   fill
                   className="object-cover"
-                  data-ai-hint={aboutImage.imageHint}
+                  data-ai-hint={whoWeAreImage.imageHint}
                 />
               )}
             </div>

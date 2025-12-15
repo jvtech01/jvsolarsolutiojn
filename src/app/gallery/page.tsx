@@ -4,6 +4,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
+const galleryHeroImage = PlaceHolderImages.find(img => img.id === 'gallery6');
+
 const allGalleryImages = [
   'gallery1', 'gallery2', 'gallery3', 'gallery4', 'gallery5', 'gallery6',
   'hero', 'about', 'residential', 'commercial', 'maintenance', 'inverter'
@@ -13,10 +15,21 @@ const allGalleryImages = [
 export default function GalleryPage() {
   return (
     <main>
-      <section className="bg-primary text-primary-foreground py-20 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold">Project Gallery</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">A Showcase of Our Quality Craftsmanship</p>
+       <section className="relative h-[400px] text-white">
+        {galleryHeroImage && (
+            <Image
+            src={galleryHeroImage.imageUrl}
+            alt={galleryHeroImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={galleryHeroImage.imageHint}
+            priority
+            />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold">Project Gallery</h1>
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">A Showcase of Our Quality Craftsmanship</p>
         </div>
       </section>
       <section id="gallery" className="py-16 md:py-24 bg-background">

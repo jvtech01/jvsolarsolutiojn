@@ -3,6 +3,10 @@ import { ServicesSection } from '@/components/solar-template/services-section';
 import type { GenerateWebsiteContentOutput } from '@/lib/types';
 import { QuoteSection } from '@/components/solar-template/quote-section';
 import { FaqSection } from '@/components/solar-template/faq-section';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const servicesHeroImage = PlaceHolderImages.find(img => img.id === 'gallery3');
 
 const defaultContent: GenerateWebsiteContentOutput = {
   homepageHeadline: '',
@@ -21,11 +25,22 @@ const defaultContent: GenerateWebsiteContentOutput = {
 export default function ServicesPage() {
   return (
     <main>
-        <section className="bg-primary text-primary-foreground py-20 text-center">
-            <div className="container mx-auto px-4">
+      <section className="relative h-[400px] text-white">
+        {servicesHeroImage && (
+            <Image
+            src={servicesHeroImage.imageUrl}
+            alt={servicesHeroImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={servicesHeroImage.imageHint}
+            priority
+            />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
             <h1 className="text-4xl md:text-5xl font-extrabold">Our Services</h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Full-Suite Solar Solutions Tailored For You</p>
-            </div>
+        </div>
       </section>
       <ServicesSection services={defaultContent.servicesDescriptions} />
       <FaqSection />
