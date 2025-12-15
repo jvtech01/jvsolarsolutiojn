@@ -1,9 +1,11 @@
 
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Sun, Building, Wrench, BatteryCharging, Power } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const serviceIcons: Record<string, React.ElementType> = {
   residential: Sun,
@@ -48,7 +50,7 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
         {Object.entries(services).map(([title, description]) => {
           const image = getImageForService(title);
           return (
-            <Card key={title} className="overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
+            <Card key={title} className="overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
               {image && (
                 <div className="relative aspect-video">
                   <Image 
@@ -63,9 +65,14 @@ export const ServicesSection = ({ services }: { services: Record<string, string>
               <CardHeader>
                 <CardTitle>{title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className='flex-grow'>
                 <p className="text-muted-foreground">{description}</p>
               </CardContent>
+              <CardFooter>
+                <Button asChild variant="outline" className="w-full">
+                  <Link href="/services">Learn More</Link>
+                </Button>
+              </CardFooter>
             </Card>
           );
         })}
