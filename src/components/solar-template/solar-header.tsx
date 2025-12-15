@@ -12,6 +12,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet';
+import { ModeToggle } from '../ui/mode-toggle';
 
 export const SolarHeader = ({ companyName }: { companyName: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-lg shadow-sm dark:bg-slate-900/80">
+    <header className="sticky top-0 z-20 bg-background/80 backdrop-blur-lg shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 group">
@@ -37,8 +38,8 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-muted-foreground">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -47,13 +48,18 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                 {link.label}
               </Link>
             ))}
+            <ModeToggle />
           </nav>
-          <Button asChild size="sm" className="hidden md:inline-flex">
-            <Link href="/contact">Get a Free Quote</Link>
-          </Button>
+          <div className="items-center gap-4 hidden md:flex">
+            <Button asChild size="sm">
+              <Link href="/contact">Get a Free Quote</Link>
+            </Button>
+          </div>
+          
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ModeToggle />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -62,7 +68,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full bg-background">
-                <SheetHeader className='border-b pb-4 flex-row justify-between items-center'>
+                 <SheetHeader className='border-b pb-4 flex-row justify-between items-center'>
                     <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                      <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
                         <Sun className="w-7 h-7 text-primary"/>
