@@ -29,19 +29,19 @@ export const SolarFooter = ({ companyName }: { companyName: string }) => (
         <div>
           <h3 className="font-semibold text-white tracking-wider">Services</h3>
           <ul className="mt-4 space-y-2">
-            <li><Link href="/services" className="hover:text-white transition-colors">Residential Solar</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Commercial Solar</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Battery Storage</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Maintenance</Link></li>
+            <li><Link href="/services#residential" className="hover:text-white transition-colors">Residential Solar</Link></li>
+            <li><Link href="/services#commercial" className="hover:text-white transition-colors">Commercial Solar</Link></li>
+            <li><Link href="/services#battery" className="hover:text-white transition-colors">Battery Storage</Link></li>
+            <li><Link href="/services#maintenance" className="hover:text-white transition-colors">Maintenance</Link></li>
           </ul>
         </div>
 
         <div className="col-span-2 md:col-span-1">
           <h3 className="font-semibold text-white tracking-wider">Contact Us</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li className="text-gray-400">123 Solar Way, Austin, TX 78701</li>
-            <li className="text-gray-400">contact@radiantsolar.com</li>
-            <li className="text-gray-400">(512) 555-0123</li>
+            <li className="text-gray-400">Rainoil Mall, 295 Nnebisi Road, Asaba, Delta State</li>
+            <li className="text-gray-400">contact@jvsolarsolutions.com</li>
+            <li className="text-gray-400">09033662797 / 07045396856</li>
           </ul>
         </div>
       </div>

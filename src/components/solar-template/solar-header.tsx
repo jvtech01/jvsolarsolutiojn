@@ -1,27 +1,99 @@
 
+'use client';
 import { Button } from '@/components/ui/button';
-import { Sun } from 'lucide-react';
+import { Sun, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from '@/components/ui/sheet';
 
-export const SolarHeader = ({ companyName }: { companyName: string }) => (
-  <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-lg shadow-sm">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center gap-2 group">
-          <Sun className="w-7 h-7 text-primary group-hover:rotate-90 transition-transform duration-300" />
-          <span className="text-xl font-bold tracking-tight text-foreground">{companyName}</span>
-        </Link>
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-muted-foreground">
-          <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-          <Link href="/about" className="hover:text-primary transition-colors">About</Link>
-          <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
-          <Link href="/gallery" className="hover:text-primary transition-colors">Gallery</Link>
-          <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
-        </nav>
-        <Button asChild size="sm" className="hidden md:inline-flex">
-          <Link href="/contact">Get a Free Quote</Link>
-        </Button>
+export const SolarHeader = ({ companyName }: { companyName: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
+  return (
+    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-lg shadow-sm dark:bg-slate-900/80">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <Link href="/" className="flex items-center gap-2 group">
+            <Sun className="w-7 h-7 text-primary group-hover:rotate-90 transition-transform duration-300" />
+            <span className="text-xl font-bold tracking-tight text-foreground">
+              {companyName}
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-muted-foreground">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Button asChild size="sm" className="hidden md:inline-flex">
+            <Link href="/contact">Get a Free Quote</Link>
+          </Button>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="w-6 h-6" />
+                  <span className="sr-only">Open Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full bg-background">
+                <div className="flex flex-col h-full">
+                   <div className="flex justify-between items-center border-b pb-4">
+                     <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
+                        <Sun className="w-7 h-7 text-primary"/>
+                        <span className="text-xl font-bold tracking-tight text-foreground">{companyName}</span>
+                      </Link>
+                      <SheetClose asChild>
+                         <Button variant="ghost" size="icon">
+                            <X className="w-6 h-6" />
+                         </Button>
+                      </SheetClose>
+                   </div>
+                  <nav className="flex-grow flex flex-col items-center justify-center gap-6 text-lg">
+                    {navLinks.map((link) => (
+                      <SheetClose key={link.href} asChild>
+                        <Link
+                          href={link.href}
+                          className="font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </nav>
+                  <SheetClose asChild>
+                    <Button asChild size="lg" className="w-full">
+                       <Link href="/contact">Get a Free Quote</Link>
+                    </Button>
+                  </SheetClose>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
