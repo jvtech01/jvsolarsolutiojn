@@ -38,7 +38,7 @@ export const HeroSection = ({ subtext }: HeroSectionProps) => {
       // If text is fully typed
       if (!isDeleting && currentHeadline === fullText) {
         // Pause before deleting
-        setTimeout(() => setIsDeleting(true), 2000);
+        setTimeout(() => setIsDeleting(true), 1500);
       } 
       // If text is fully deleted
       else if (isDeleting && currentHeadline === '') {
@@ -47,7 +47,7 @@ export const HeroSection = ({ subtext }: HeroSectionProps) => {
       }
     };
 
-    const typingSpeed = isDeleting ? 50 : 150;
+    const typingSpeed = isDeleting ? 30 : 100;
     const typingTimeout = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(typingTimeout);
