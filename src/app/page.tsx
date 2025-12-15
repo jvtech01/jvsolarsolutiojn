@@ -3,6 +3,11 @@
 
 import { HeroSection } from '@/components/solar-template/hero-section';
 import { TestimonialsSection } from '@/components/solar-template/testimonials-section';
+import { AboutSection } from '@/components/solar-template/about-section';
+import { ServicesSection } from '@/components/solar-template/services-section';
+import { GallerySection } from '@/components/solar-template/gallery-section';
+import { FaqSection } from '@/components/solar-template/faq-section';
+import { QuoteSection } from '@/components/solar-template/quote-section';
 import type { GenerateWebsiteContentOutput } from '@/lib/types';
 
 const defaultContent: GenerateWebsiteContentOutput = {
@@ -24,7 +29,12 @@ export default function Home() {
   return (
     <main>
       <HeroSection headline={content.homepageHeadline} subtext={content.homepageSubtext} />
+      <AboutSection content={content.aboutUsContent} />
+      <ServicesSection services={content.servicesDescriptions} />
+      <GallerySection />
       <TestimonialsSection />
+      <FaqSection />
+      <QuoteSection />
     </main>
   );
 }
