@@ -7,6 +7,8 @@ import { useState } from 'react';
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet';
@@ -59,8 +61,8 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full bg-background">
-                <div className="flex flex-col h-full">
-                   <div className="flex justify-between items-center border-b pb-4">
+                <SheetHeader className='border-b pb-4 flex-row justify-between items-center'>
+                    <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                      <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
                         <Sun className="w-7 h-7 text-primary"/>
                         <span className="text-xl font-bold tracking-tight text-foreground">{companyName}</span>
@@ -70,7 +72,8 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                             <X className="w-6 h-6" />
                          </Button>
                       </SheetClose>
-                   </div>
+                </SheetHeader>
+                <div className="flex flex-col h-full">
                   <nav className="flex-grow flex flex-col items-center justify-center gap-6 text-lg">
                     {navLinks.map((link) => (
                       <SheetClose key={link.href} asChild>
