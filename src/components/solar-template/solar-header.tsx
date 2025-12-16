@@ -33,8 +33,8 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 group">
              <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
-            <span className="text-xl font-bold tracking-tight text-foreground">
-              {companyName}
+            <span className="text-lg font-bold tracking-tight text-foreground">
+              Emmy-Digital telecom
             </span>
           </Link>
 
@@ -73,7 +73,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                     <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                      <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
                         <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
-                        <span className="text-xl font-bold tracking-tight text-foreground">{companyName}</span>
+                        <span className="text-lg font-bold tracking-tight text-foreground">Emmy-Digital telecom</span>
                       </Link>
                       <SheetClose asChild>
                          <Button variant="ghost" size="icon">

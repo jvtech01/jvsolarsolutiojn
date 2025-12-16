@@ -22,7 +22,7 @@ export default function AboutPage() {
           />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-            <h1 className="text-4xl md:text-5xl font-extrabold">About Emmy-Digital telecommunications</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold">About Emmy-Digital telecom</h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Your Trusted Partner in Renewable Energy & Security</p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 We are a passionate team of certified professionals dedicated to helping our community transition to sustainable energy and enhance their security. With over a decade of experience, we guarantee quality installations, use only the highest-rated materials, and provide exceptional customer service from start to finish. Our mission is to make solar and security solutions accessible and affordable for everyone.
               </p>
               <p>
-                Founded on the principles of integrity, innovation, and sustainability, Emmy-Digital telecommunications has grown to become a leading provider in the region. We believe in the power of technology to not only power our homes and businesses but also to create a safer, brighter, and cleaner future for generations to come.
+                Founded on the principles of integrity, innovation, and sustainability, Emmy-Digital telecom has grown to become a leading provider in the region. We believe in the power of technology to not only power our homes and businesses but also to create a safer, brighter, and cleaner future for generations to come.
               </p>
             </div>
              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
