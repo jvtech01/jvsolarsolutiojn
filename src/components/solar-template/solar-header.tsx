@@ -34,7 +34,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
           <Link href="/" className="flex items-center gap-2 group">
              <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
             <span className="text-lg font-bold tracking-tight text-foreground">
-              Emmy-Digital telecom
+              Emmy-Digital Telecom
             </span>
           </Link>
 
@@ -73,7 +73,7 @@ export const SolarHeader = ({ companyName }: { companyName: string }) => {
                     <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                      <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
                         <Image src="/images/logo.jpg" alt={`${companyName} logo`} width={40} height={40} className="rounded-full" />
-                        <span className="text-lg font-bold tracking-tight text-foreground">Emmy-Digital telecom</span>
+                        <span className="text-lg font-bold tracking-tight text-foreground">Emmy-Digital Telecom</span>
                       </Link>
                       <SheetClose asChild>
                          <Button variant="ghost" size="icon">
