@@ -11,7 +11,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'Emmydon solar tech enterprises',
+  title: 'Emmy-Digital telecommunications',
   description: 'Your trusted partner for solar and security solutions.',
   icons: {
     icon: '/images/favicon.jpg',
@@ -23,7 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const companyName = 'Emmydon solar tech';
+  const companyName = 'Emmy-Digital telecommunications';
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${inter.variable} antialiased bg-background text-foreground`}>
